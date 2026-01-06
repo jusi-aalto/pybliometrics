@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "pybliometrics": {
+      "command": "pybliometrics-mcp"
+    }
+  }
+}

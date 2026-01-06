@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybliometrics-mcp"
+version = "0.1.0"
+description = "MCP server for pybliometrics - access Scopus, ScienceDirect, and SciVal APIs"
+authors = [{name = "pybliometrics-mcp", email = "example@example.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "pybliometrics>=4.0.0",
+]
+
+[project.scripts]
+pybliometrics-mcp = "pybliometrics_mcp.server:main"
