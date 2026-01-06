@@ -290,13 +290,18 @@ async def call_tool(name: str, arguments: Any) -> list[types.TextContent]:
         return [types.TextContent(type="text", text=f"Error: {str(e)}")]
 
 
-async def main():
+async def run_server():
     """Run the MCP server"""
     async with stdio_server() as (read_stream, write_stream):
         logger.info("Starting pybliometrics MCP server")
         await app.run(read_stream, write_stream, app.create_initialization_options())
 
 
-if __name__ == "__main__":
+def main():
+    """Entry point for the MCP server"""
     import asyncio
-    asyncio.run(main())
+    asyncio.run(run_server())
+
+
+if __name__ == "__main__":
+    main()
