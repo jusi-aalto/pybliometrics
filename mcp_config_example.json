@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "pybliometrics": {
+      "command": "python3",
+      "args": ["/ABSOLUTE/PATH/TO/pybliometrics/mcp_server.py"]
+    }
+  }
+}
